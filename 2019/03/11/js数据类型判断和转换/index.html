@@ -79,16 +79,17 @@
 
 
 
-<meta name="description" content="刘小妞的个人博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="刘小妞的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="前言无论笔试还是面试，总会问到数据类型和隐式转换。今天彻底整理一下这块的知识，希望对大家有帮助。 看到下面的题，是不是已经蒙了，读完这篇文章，就能顺利通关了1234567891011121314151617181920212223console.log([] == 0) //true console.log(![] == 0)  //true console.log([] == ![]) //tr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js数据类型判断和转换">
+<meta property="og:url" content="http://yoursite.com/2019/03/11/js数据类型判断和转换/index.html">
 <meta property="og:site_name" content="刘小妞的博客">
-<meta property="og:description" content="刘小妞的个人博客">
+<meta property="og:description" content="前言无论笔试还是面试，总会问到数据类型和隐式转换。今天彻底整理一下这块的知识，希望对大家有帮助。 看到下面的题，是不是已经蒙了，读完这篇文章，就能顺利通关了1234567891011121314151617181920212223console.log([] == 0) //true console.log(![] == 0)  //true console.log([] == ![]) //tr">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-12T02:19:34.983Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="刘小妞的博客">
-<meta name="twitter:description" content="刘小妞的个人博客">
+<meta name="twitter:title" content="js数据类型判断和转换">
+<meta name="twitter:description" content="前言无论笔试还是面试，总会问到数据类型和隐式转换。今天彻底整理一下这块的知识，希望对大家有帮助。 看到下面的题，是不是已经蒙了，读完这篇文章，就能顺利通关了1234567891011121314151617181920212223console.log([] == 0) //true console.log(![] == 0)  //true console.log([] == ![]) //tr">
 
 
 
@@ -118,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/11/js数据类型判断和转换/">
 
 
 
 
 
-  <title>刘小妞的博客</title>
+  <title>js数据类型判断和转换 | 刘小妞的博客</title>
   
 
 
@@ -143,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,9 +245,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -277,9 +277,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/03/11/js数据类型判断和转换/" itemprop="url">js数据类型判断和转换</a></h1>
+          <h1 class="post-title" itemprop="name headline">js数据类型判断和转换</h1>
         
 
         <div class="post-meta">
@@ -329,9 +327,7 @@
       
 
       
-        
-          
-            <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>无论笔试还是面试，总会问到数据类型和隐式转换。今天彻底整理一下这块的知识，希望对大家有帮助。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>无论笔试还是面试，总会问到数据类型和隐式转换。今天彻底整理一下这块的知识，希望对大家有帮助。</p>
 <p>看到下面的题，是不是已经蒙了，读完这篇文章，就能顺利通关了<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">console.log([] == 0) //true </span><br><span class="line"></span><br><span class="line">console.log(![] == 0)  //true </span><br><span class="line"></span><br><span class="line">console.log([] == ![]) //true</span><br><span class="line"></span><br><span class="line">console.log([] == []) //false</span><br><span class="line"></span><br><span class="line">console.log(&#123;&#125; == &#123;&#125;) //false</span><br><span class="line"></span><br><span class="line">console.log(&#123;&#125; == !&#123;&#125;) //false</span><br><span class="line"></span><br><span class="line">console.log([] == false) //true</span><br><span class="line"></span><br><span class="line">console.log(&#123;&#125; == false) //false</span><br><span class="line"></span><br><span class="line">if([]) &#123;console.log(3)&#125; //3 </span><br><span class="line"></span><br><span class="line">if([1] == [1])&#123;console.log(4)&#125; //没有输出</span><br><span class="line"></span><br><span class="line">console.log(&apos;2&apos; &gt; 10) //false</span><br><span class="line"></span><br><span class="line">console.log(&apos;2&apos; &gt; &apos;10&apos;) //true</span><br></pre></td></tr></table></figure></p>
 <h2 id="数据类型判断"><a href="#数据类型判断" class="headerlink" title="数据类型判断"></a>数据类型判断</h2><h3 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h3><p>js数据类型一共有7种，undefined、 null、 boolean 、string、 number、 object、 Symbol</p>
 <h3 id="类型判断"><a href="#类型判断" class="headerlink" title="类型判断"></a>类型判断</h3><h4 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">typeof undefined //undefined</span><br><span class="line">typeof true //boolean</span><br><span class="line">typeof 42 //number</span><br><span class="line">typeof &apos;42&apos; //string</span><br><span class="line">typeof &#123; life: 42 &#125; //object</span><br><span class="line">let s = Symbol();</span><br><span class="line">typeof s //symbol</span><br><span class="line"></span><br><span class="line">//特殊情况</span><br><span class="line">typeof [1,2,3,4]// object</span><br><span class="line">typeof null //object</span><br><span class="line">typeof new Date()  //object</span><br><span class="line">typeof function () &#123;&#125;  //function</span><br></pre></td></tr></table></figure>
@@ -386,8 +382,6 @@
 <h2 id="实战练习"><a href="#实战练习" class="headerlink" title="实战练习"></a>实战练习</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">//true,空数组valueOf还是空数组，toString()转成得到空字符串，空字符串调用Number转成0</span><br><span class="line">console.log([] == 0) //true </span><br><span class="line"></span><br><span class="line">//true，非的运算级别高，空数组转为布尔值为true,所以![]得到的false，Number转换为0， 最后结果还是true</span><br><span class="line">console.log(![] == 0)  //true </span><br><span class="line"></span><br><span class="line">//true,前面是调用valueOf()后调用toString()转成false，后边是非转成false</span><br><span class="line">console.log([] == ![]) </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//false，2个数组放在堆里面，栈中存储的是地址</span><br><span class="line">console.log([] == []) </span><br><span class="line"></span><br><span class="line">//引用类型存储在堆中，栈中的是地址，所以是false</span><br><span class="line">console.log(&#123;&#125; == &#123;&#125;) </span><br><span class="line"></span><br><span class="line">//&#123;&#125;.valueOf().toString()得到的是[object, Object], !&#123;&#125;得到的是false，Number转换后不相等</span><br><span class="line">console.log(&#123;&#125; == !&#123;&#125;)</span><br><span class="line"></span><br><span class="line">//数组的valueOf().toString()后为空，所以是真</span><br><span class="line">console.log([] == false) //true</span><br><span class="line"></span><br><span class="line">//因为对象调用valueOf后为&#123;&#125;, toString后转为[object, Object]，Number后是NaN,</span><br><span class="line">//任何涉及NaN的操作都返回NaN，NaN和任何值不相等</span><br><span class="line">console.log(&#123;&#125; == false) //false</span><br><span class="line"></span><br><span class="line">//空数组的boolean值为true</span><br><span class="line">if([]) &#123;console.log(3)&#125; //3 </span><br><span class="line"></span><br><span class="line">//2个数组的栈地址不同</span><br><span class="line">if([1] == [1])&#123;console.log(4)&#125; //没有输出</span><br><span class="line"></span><br><span class="line">//false,转成2&gt;10</span><br><span class="line">console.log(&apos;2&apos; &gt; 10) </span><br><span class="line"></span><br><span class="line">//都是字符串，按照字符串的unicode转换，&apos;2&apos;.charCodeAt() &gt; &apos;10&apos;.charCodeAt = 50 &gt; 49</span><br><span class="line">console.log(&apos;2&apos; &gt; &apos;10&apos;) </span><br><span class="line"></span><br><span class="line">//都是字符串，按照字符串的unicode转换</span><br><span class="line">console.log(&apos;abc&apos; &gt; &apos;b&apos;) //false</span><br></pre></td></tr></table></figure>
 <p>参考：<a href="http://javascript.ruanyifeng.com/grammar/conversion.html" target="_blank" rel="noopener">http://javascript.ruanyifeng.com/grammar/conversion.html</a></p>
 
-          
-        
       
     </div>
     
@@ -404,12 +398,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -419,10 +413,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -430,6 +425,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -450,8 +449,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -493,6 +501,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型判断"><span class="nav-number">2.</span> <span class="nav-text">数据类型判断</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据类型"><span class="nav-number">2.1.</span> <span class="nav-text">数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型判断"><span class="nav-number">2.2.</span> <span class="nav-text">类型判断</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#typeof"><span class="nav-number">2.2.1.</span> <span class="nav-text">typeof</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Object-prototype-toString-call"><span class="nav-number">2.2.2.</span> <span class="nav-text">Object.prototype.toString.call</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#instanceof"><span class="nav-number">2.2.3.</span> <span class="nav-text">instanceof</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#constructor-属性"><span class="nav-number">2.2.4.</span> <span class="nav-text">constructor 属性</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面试常问"><span class="nav-number">3.</span> <span class="nav-text">面试常问</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#怎么判断是不是数组"><span class="nav-number">3.1.</span> <span class="nav-text">怎么判断是不是数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何判断一个对象是不是空对象"><span class="nav-number">3.2.</span> <span class="nav-text">如何判断一个对象是不是空对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类似的数组转化成数组"><span class="nav-number">3.3.</span> <span class="nav-text">类似的数组转化成数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串翻转"><span class="nav-number">3.4.</span> <span class="nav-text">字符串翻转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#字符串和数组转换"><span class="nav-number">3.5.</span> <span class="nav-text">字符串和数组转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类型转换"><span class="nav-number">4.</span> <span class="nav-text">类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#显示类型转换"><span class="nav-number">4.1.</span> <span class="nav-text">显示类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#转成数字，Number-、parseInt-、parseFloat"><span class="nav-number">4.1.1.</span> <span class="nav-text">转成数字，Number()、parseInt()、parseFloat()</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Boolean"><span class="nav-number">4.1.2.</span> <span class="nav-text">Boolean</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#String函数可以将任意类型的值转化成字符串"><span class="nav-number">4.1.3.</span> <span class="nav-text">String函数可以将任意类型的值转化成字符串</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#隐式类型转换"><span class="nav-number">4.2.</span> <span class="nav-text">隐式类型转换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#自动转化为布尔值"><span class="nav-number">4.2.1.</span> <span class="nav-text">自动转化为布尔值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动转换为字符串"><span class="nav-number">4.2.2.</span> <span class="nav-text">自动转换为字符串</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动转化为数值"><span class="nav-number">4.2.3.</span> <span class="nav-text">自动转化为数值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#运算符"><span class="nav-number">4.2.4.</span> <span class="nav-text">== 运算符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实战练习"><span class="nav-number">5.</span> <span class="nav-text">实战练习</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -633,6 +657,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
