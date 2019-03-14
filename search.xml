@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode每日一练]]></title>
+    <url>%2F2019%2F03%2F14%2Fleetcode%2F</url>
+    <content type="text"><![CDATA[前言每日一练，日积月累 第一题题目，Middle of the Linked ListInput: [1,2,3,4,5]Output: Node 3 from this list (Serialization: [3,4,5])The returned node has value 3. (The judge’s serialization of this node is [3,4,5]).Note that we returned a ListNode object ans, such that:ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, and ans.next.next.next = NULL.Example 2: Input: [1,2,3,4,5,6]Output: Node 4 from this list (Serialization: [4,5,6])Since the list has two middle nodes with values 3 and 4, we return the second one. 解析求中位数，如果是数组的长度是奇数，直接返回中间数，如果是偶数，返回中间2个数的第二个数。 最直接的想法就是，把所有的元素放入一个数组中，求中间的数字假设数组长度为N, 时间复杂度为O(N),空间复杂度为O(N)(数组占用的空间) 12345678var middleNode = function(head) &#123; // 把所有的元素装到一个数组中，然后求中位数 let arr = [head]; while(arr[arr.length -1].next !== null)&#123; arr.push(arr[arr.length -1].next) &#125; return arr[Math.trunc(arr.length/2)]&#125;; 设置2个指针，一快一满，快的是慢的移动速度的2倍，快的到达数组结尾时，慢的正好在中间假设数组长度为N, 时间复杂度为O(N),空间复杂度为O(1)(2个指针占用的空间) 12345678var middleNode = function(head) &#123; let slow = fast = head; while(fast &amp;&amp; fast.next !== null)&#123; slow = slow.next; fast = fast.next.next; &#125; return slow;&#125;;]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2019学习目标]]></title>
     <url>%2F2019%2F03%2F11%2F2019%E5%B9%B4%E7%9B%AE%E6%A0%87%2F</url>
     <content type="text"><![CDATA[前言工作一年多快2年了，中间还换了一次工作，2019，不忘初心，给自己一个目标，并努力的实现，越努力，越幸运。 目标 读6本书，红宝书， es6，react，不知道的js 写博客，1月2篇，共24篇 刷题，一天一道，365道题 其他书籍读2-4本]]></content>
