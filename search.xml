@@ -2,6 +2,19 @@
 <search>
   <entry>
     <title><![CDATA[LeetCode每日一练]]></title>
+    <url>%2F2019%2F03%2F17%2Fleetcode-2019-03-17%2F</url>
+    <content type="text"><![CDATA[题目，191. Number of 1 Bits123Input: 00000000000000000000000000001011Output: 3Explanation: The input binary string 00000000000000000000000000001011 has a total of three &apos;1&apos; bits. 解析 循环，每位和1与，不等于0，则count加1 1234567891011var hammingWeight = function(n) &#123; let count = 0; let mask = 1; for(let i = 0; i&lt; 32; i++) &#123; if((n&amp;mask) !== 0) &#123; count ++; &#125; mask &lt;&lt;= 1; // mask = mask*2;相当于1的位置左移 &#125; return count;&#125;; n&amp;(n-1)解法 1234假设n = 1 0 0 1 0 0 n-1= 1 0 0 0 1 1 n&amp;(n-1)=1 0 0 n和n-1只有最后的几位不一样，与运算之后，只剩下了前面相同的部分（100）,1的个数正好减少了1个 12345678var hammingWeight = function(n) &#123; let sum = 0; while (n != 0) &#123; sum++; n &amp;= (n - 1); &#125; return sum;&#125;;]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode每日一练]]></title>
     <url>%2F2019%2F03%2F16%2Fleetcode-2019-03-16%2F</url>
     <content type="text"><![CDATA[题目，Path Sum III123456789101112131415root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8 10 / \ 5 -3 / \ \ 3 2 11 / \ \3 -2 1Return 3. The paths that sum to 8 are:1. 5 -&gt; 32. 5 -&gt; 2 -&gt; 13. -3 -&gt; 11 解析从整个树寻找和为sum = （左子树和为sum） + （右子树和为sum）+ （带根节点和为sum）12345678910111213141516let pathSum = function(root, sum) &#123; if (!root) return 0; return sumHelper(root, 0, sum) + pathSum(root.left, sum) + pathSum(root.right, sum);&#125;;let sumHelper = (root, pre, sum) =&gt; &#123; let count = 0; if (!root) return 0; //先求出之前的pre和当前节点的和 let total = pre + root.val; // total === sum,则寻找到了一组，值为1，不相等，则是0. 然后从左右子树找pre为total，和为sum的组合 if(total === sum) &#123; count = 1; &#125; return count + sumHelper(root.left, total, sum) + sumHelper(root.right, total, sum);&#125;;]]></content>
       <categories>
