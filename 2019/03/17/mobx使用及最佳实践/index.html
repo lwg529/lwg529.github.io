@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="js,算法,数据结构,">
+  <meta name="keywords" content="mobx,">
 
 
 
@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="题目，Middle of the Linked ListInput: [1,2,3,4,5]Output: Node 3 from this list (Serialization: [3,4,5])The returned node has value 3.  (The judge’s serialization of this node is [3,4,5]).Note that we ret">
-<meta name="keywords" content="js,算法,数据结构">
+<meta name="description" content="mobx是一个简单、可扩展的状态管理库 什么是状态管理首先我们来想一下这些问题，什么是状态管理，为什么要使用状态管理？ 当我们构建一个前端应用时，组件内部都会有一些状态，使用this.state和setState就可以解决发部分问题。 当应用越来越复杂，出现了兄弟组件之间的通信，跨级组件通信，就需要把所有的状态存储到共同的祖先，通过props层层传递，状态发生变化时，在通过层层的传递，通知祖先组件">
+<meta name="keywords" content="mobx">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LeetCode每日一练">
-<meta property="og:url" content="http://yoursite.com/2019/03/14/leetcode-2019-03-14/index.html">
+<meta property="og:title" content="mobx使用及最佳实践">
+<meta property="og:url" content="http://yoursite.com/2019/03/17/mobx使用及最佳实践/index.html">
 <meta property="og:site_name" content="刘小妞的博客">
-<meta property="og:description" content="题目，Middle of the Linked ListInput: [1,2,3,4,5]Output: Node 3 from this list (Serialization: [3,4,5])The returned node has value 3.  (The judge’s serialization of this node is [3,4,5]).Note that we ret">
+<meta property="og:description" content="mobx是一个简单、可扩展的状态管理库 什么是状态管理首先我们来想一下这些问题，什么是状态管理，为什么要使用状态管理？ 当我们构建一个前端应用时，组件内部都会有一些状态，使用this.state和setState就可以解决发部分问题。 当应用越来越复杂，出现了兄弟组件之间的通信，跨级组件通信，就需要把所有的状态存储到共同的祖先，通过props层层传递，状态发生变化时，在通过层层的传递，通知祖先组件">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-16T09:01:59.621Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/b30ea430ly1g161jwwpa9j212w0db76m.jpg">
+<meta property="og:updated_time" content="2019-03-17T13:29:28.305Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LeetCode每日一练">
-<meta name="twitter:description" content="题目，Middle of the Linked ListInput: [1,2,3,4,5]Output: Node 3 from this list (Serialization: [3,4,5])The returned node has value 3.  (The judge’s serialization of this node is [3,4,5]).Note that we ret">
+<meta name="twitter:title" content="mobx使用及最佳实践">
+<meta name="twitter:description" content="mobx是一个简单、可扩展的状态管理库 什么是状态管理首先我们来想一下这些问题，什么是状态管理，为什么要使用状态管理？ 当我们构建一个前端应用时，组件内部都会有一些状态，使用this.state和setState就可以解决发部分问题。 当应用越来越复杂，出现了兄弟组件之间的通信，跨级组件通信，就需要把所有的状态存储到共同的祖先，通过props层层传递，状态发生变化时，在通过层层的传递，通知祖先组件">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/b30ea430ly1g161jwwpa9j212w0db76m.jpg">
 
 
 
@@ -120,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/14/leetcode-2019-03-14/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/17/mobx使用及最佳实践/">
 
 
 
 
 
-  <title>LeetCode每日一练 | 刘小妞的博客</title>
+  <title>mobx使用及最佳实践 | 刘小妞的博客</title>
   
 
 
@@ -283,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/14/leetcode-2019-03-14/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/mobx使用及最佳实践/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘小妞">
@@ -300,7 +302,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">LeetCode每日一练</h1>
+          <h1 class="post-title" itemprop="name headline">mobx使用及最佳实践</h1>
         
 
         <div class="post-meta">
@@ -312,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-14T00:00:00+08:00">
-                2019-03-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-17T00:00:00+08:00">
+                2019-03-17
               </time>
             
 
@@ -335,8 +337,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/算法/" itemprop="url" rel="index">
-                    <span itemprop="name">算法</span>
+                  <a href="/categories/mobx/" itemprop="url" rel="index">
+                    <span itemprop="name">mobx</span>
                   </a>
                 </span>
 
@@ -352,7 +354,7 @@
 
           
           
-             <span id="/2019/03/14/leetcode-2019-03-14/" class="leancloud_visitors" data-flag-title="LeetCode每日一练">
+             <span id="/2019/03/17/mobx使用及最佳实践/" class="leancloud_visitors" data-flag-title="mobx使用及最佳实践">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,17 +385,53 @@
       
 
       
-        <h4 id="题目，Middle-of-the-Linked-List"><a href="#题目，Middle-of-the-Linked-List" class="headerlink" title="题目，Middle of the Linked List"></a>题目，<a href="https://leetcode.com/problems/middle-of-the-linked-list/" target="_blank" rel="noopener">Middle of the Linked List</a></h4><p>Input: [1,2,3,4,5]<br>Output: Node 3 from this list (Serialization: [3,4,5])<br>The returned node has value 3.  (The judge’s serialization of this node is [3,4,5]).<br>Note that we returned a ListNode object ans, such that:<br>ans.val = 3, ans.next.val = 4, ans.next.next.val = 5, and ans.next.next.next = NULL.</p>
-<p>Input: [1,2,3,4,5,6]<br>Output: Node 4 from this list (Serialization: [4,5,6])<br>Since the list has two middle nodes with values 3 and 4, we return the second one.</p>
-<h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><p>求中位数，如果是数组的长度是奇数，直接返回中间数，如果是偶数，返回中间2个数的第二个数。</p>
-<ol>
-<li><p>最直接的想法就是，把所有的元素放入一个数组中，求中间的数字<br>假设数组长度为N, 时间复杂度为O(N),空间复杂度为O(N)(数组占用的空间)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var middleNode = function(head) &#123;</span><br><span class="line">  //  把所有的元素装到一个数组中，然后求中位数   </span><br><span class="line">  let arr = [head];</span><br><span class="line">  while(arr[arr.length -1].next !== null)&#123;</span><br><span class="line">    arr.push(arr[arr.length -1].next)</span><br><span class="line">  &#125;</span><br><span class="line">  return arr[Math.trunc(arr.length/2)]</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <p>mobx是一个简单、可扩展的状态管理库</p>
+<h3 id="什么是状态管理"><a href="#什么是状态管理" class="headerlink" title="什么是状态管理"></a>什么是状态管理</h3><p>首先我们来想一下这些问题，什么是状态管理，为什么要使用状态管理？</p>
+<p>当我们构建一个前端应用时，组件内部都会有一些状态，使用this.state和setState就可以解决发部分问题。</p>
+<p>当应用越来越复杂，出现了兄弟组件之间的通信，跨级组件通信，就需要把所有的状态存储到共同的祖先，通过props层层传递，状态发生变化时，在通过层层的传递，通知祖先组件。在一个大型应用中，状态的管理就会变得异常的复杂混乱。</p>
+<p>因此我们需要状态管理库。所有组件的公共状态统一存在一个store中，修改和更新状态也在store中。每个组件中都可以直接获取store中状态，并且修改它。</p>
+<h3 id="mobx-原理"><a href="#mobx-原理" class="headerlink" title="mobx 原理"></a>mobx 原理</h3><p><img src="http://ww1.sinaimg.cn/large/b30ea430ly1g161jwwpa9j212w0db76m.jpg" alt="mobx运行原理"></p>
+<p>通俗一点的解释就是，事件触发actions，更改了store中的数据，然后计算值和UI都会更新。</p>
+<h4 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h4><p>Actions：任何可以改变状态的代码，都是actions。最容易理解的是用户事件（点击按钮）</p>
+<p>State：存储的全局状态，数据。</p>
+<p>Observable：可以被观察的值，不仅原始值可以被观察，引用值也可以被观察，比如对象，数组。当数据被观察后，使用可观察值的组件，会在观察值变化后，自动重新渲染。</p>
+<p>Computed values：相关数据变化可以计算出的值，比如一个可观察数组的长度，就是一个计算值。计算值不是实时更新的，只有使用时，才会更新，不再使用时，会自动被垃圾回收。</p>
+<p>Reactions：数据变化是的一些变化，比如发起请求，更新React组件等</p>
+<p>observer：react组件增加observer装饰，就会从无状态的组件变成响应式组件，当组件使用了可观察的值，可观察的值变化时组件会自动重新渲染。</p>
+<p>自定义 reactions：当unfinishedTodoCount变化时，自动打印日志<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">autorun(() =&gt; &#123;</span><br><span class="line">    console.log(&quot;Tasks left: &quot; + todos.unfinishedTodoCount)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h4 id="mobx使用"><a href="#mobx使用" class="headerlink" title="mobx使用"></a>mobx使用</h4><ol>
+<li>定义一个可观察的状态</li>
+</ol>
+<p>定义了一个可观察状态timer，初始值为0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import &#123;observable&#125; from &apos;mobx&apos;;</span><br><span class="line"></span><br><span class="line">var appState = observable(&#123;</span><br><span class="line">    timer: 0</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li><p>定义响应式组件，触发action改变state<br>定义了一个响应式组件TimerView，button点击调用resetTimer，页面上 Seconds passed显示当前的timer的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import &#123;observer&#125; from &apos;mobx-react&apos;;</span><br><span class="line"></span><br><span class="line">@observer</span><br><span class="line">class TimerView extends React.Component &#123;</span><br><span class="line">    render() &#123;</span><br><span class="line">        return (</span><br><span class="line">            &lt;button onClick=&#123;this.onReset.bind(this)&#125;&gt;</span><br><span class="line">                Seconds passed: &#123;this.props.appState.timer&#125;</span><br><span class="line">            &lt;/button&gt;</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    onReset() &#123;</span><br><span class="line">        this.props.appState.resetTimer();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">ReactDOM.render(&lt;TimerView appState=&#123;appState&#125; /&gt;, document.body);</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>设置2个指针，一快一满，快的是慢的移动速度的2倍，快的到达数组结尾时，慢的正好在中间<br>假设数组长度为N, 时间复杂度为O(N),空间复杂度为O(1)(2个指针占用的空间)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var middleNode = function(head) &#123;</span><br><span class="line">  let slow = fast = head;</span><br><span class="line">  while(fast &amp;&amp; fast.next !== null)&#123;</span><br><span class="line">      slow = slow.next;</span><br><span class="line">      fast = fast.next.next;</span><br><span class="line">  &#125;</span><br><span class="line">  return slow;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<li><p>更改状态<br>resetTimer函数将timer置为0，定时函数令timer每秒加1.</p>
 </li>
 </ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">appState.resetTimer = action(function reset() &#123;</span><br><span class="line">    appState.timer = 0;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">setInterval(action(function tick() &#123;</span><br><span class="line">    appState.timer += 1;</span><br><span class="line">&#125;), 1000);</span><br></pre></td></tr></table></figure>
+<p>这就是mobx工作的过程。先定义一些全局共享的状态，比如timer，并且使其可观察。然后定义响应式的组件，组件中使用了timer，当timer更新时，组件会自动重新渲染。组件中的按钮点击事件，又会触发action，造成state中的timer更新。</p>
+<p>这就是mobx的工作流程，action改变state，state改变会更新所有受影响的view。当state更新时，所有依赖这些状态的组件，都会开始细颗粒度的更新。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">actions -------&gt; state --------&gt; views</span><br></pre></td></tr></table></figure></p>
+<h3 id="mobx-react-渲染性能优化原理"><a href="#mobx-react-渲染性能优化原理" class="headerlink" title="mobx-react 渲染性能优化原理"></a>mobx-react 渲染性能优化原理</h3><p>我们可以通过使用@observer，将react组件转换成一个监听者(Reactions)，这样在被监听的应用状态变量(Observable)有更新时，react组件就会重新渲染。如下代码中，TodoItemModel中的应用状态变量有更新时，TodoItem UI会重新渲染:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">class TodoItemModel &#123;</span><br><span class="line">    id</span><br><span class="line">    @observable title;</span><br><span class="line">    @observable completed;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">@observer</span><br><span class="line">class TodoItem extends React.Component &#123;</span><br><span class="line">    .....</span><br><span class="line">    render() &#123;</span><br><span class="line">        //UI logic code ...</span><br><span class="line">        let todo = this.props.todo;</span><br><span class="line">        let title = todo.title;</span><br><span class="line">        let complete = todo.complete;</span><br><span class="line">        return (</span><br><span class="line">            ....</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var todoItem = new TodoItemModel();</span><br><span class="line">todoItem.title = &apos;&apos;;</span><br></pre></td></tr></table></figure>
+<p>在使用react的过程中，我们绕不开渲染性能优化问题，因为默认情况下react组件的shouldComponentUpdate函数会一直返回true，这回导致所有的组件都会进行耗时的虚拟DOM比较。在使用redux作为react的逻辑层框架时，我们可以使用经典的PureComponent+ShallowCompare的方式进行渲染性能优化，那么在使用mobx作为react的store时，我们该如何进行渲染性能优化呢？</p>
+<p>(1). 默认的基本渲染性能优化<br>通过分析源代码发现，在使用@observer将react组件转换成一个监听者(Reactions)后，mobx会为react组件提供一个精确的、细粒度的shouldComponentUpdate函数:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">shouldComponentUpdate: function(nextProps, nextState) &#123;</span><br><span class="line">  ......</span><br><span class="line">  // update on any state changes (as is the default)</span><br><span class="line">  if (this.state !== nextState) &#123;</span><br><span class="line">    return true;</span><br><span class="line">  &#125;</span><br><span class="line">  // update if props are shallowly not equal</span><br><span class="line">  return isObjectShallowModified(this.props, nextProps);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>借助于mobx框架对Observable变量引用的跟踪和依赖收集，mobx能够精确地得到react组件对Observable变量的依赖图谱，然后再用经典的ShallowCompare实现细粒度的shouldComponentUpdate函数，以达到100%无浪费render。这一切都是自动完成地，fantastic！使用mobx后，我们再也无需手动写shouldComponentUpdate函数了。</p>
+<p>(2). 使用transaction进行高级渲染性能优化<br>mobx在带来便利性的同时，也可能引入新的问题。上文反复提到：mobx会记录监听者(Reactions)中对Observable变量的引用，通过引用在运行时动态地构建依赖图谱，从而实现精确地、细粒度地更新。</p>
+<p>如果一个React组件依赖于多个应用状态(Observable)变量，而一次操作需要更新多个应用状态(Observable)变量时，React组件就会进行多次渲染。在有些场景下，更新地粒度过细，也不是我们希望看到的场景。比如如下代码，调用TodoItemModel的reset方法设置了两个应用状态变量，会导致对应的UI组件重新渲染两次：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">//todoItem UI组件，依赖于应用状态变量completed和title</span><br><span class="line">@observer</span><br><span class="line">class TodoItem extends React.Component &#123;</span><br><span class="line">    ...</span><br><span class="line">    render() &#123;</span><br><span class="line">        //UI logic code ...</span><br><span class="line">        let todo = this.props.todo;</span><br><span class="line">        let title = todo.title;</span><br><span class="line">        let completed = todo.complete;</span><br><span class="line">        return (</span><br><span class="line">            ......</span><br><span class="line">        );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">class TodoItemModel &#123;</span><br><span class="line">    id;</span><br><span class="line">    @observable title;</span><br><span class="line">    @observable completed;</span><br><span class="line">    ......</span><br><span class="line">    reset() &#123;</span><br><span class="line">        /*</span><br><span class="line">        分别设置title和completed值，</span><br><span class="line">        会触发两次todoItem UI组件的重新渲染</span><br><span class="line">        */</span><br><span class="line">        this.completed = false;</span><br><span class="line">        this.title= &apos;&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var todoItem = new TodoItemModel();</span><br><span class="line">//调用reset将触发两次TodoItem UI组件的重新渲染</span><br><span class="line">todoItem.reset();</span><br></pre></td></tr></table></figure>
+<p>在语义层面，有时我们需要将多个应用状态(Observable)的更新，视为一次操作，并希望只触发一次监听者(Reactions)的动作(UI更新、网络请求等)。为此mobx提供了transaction功能，可以将对多个应用状态(Observable)的更新封装成一个事务，只有在事务执行完成后，才会触发一次对应的监听者(Reactions)。这就使得我们对组件的渲染有更精细化的控制。比如如下代码，使用transaction后，对应用状态(Observable)的两次更新只会触发一次UI的更新。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">class TodoItemModel &#123;</span><br><span class="line">    id;</span><br><span class="line">    @observable title;</span><br><span class="line">    @observable completed;</span><br><span class="line">    ......</span><br><span class="line">    reset() &#123;</span><br><span class="line">        /*</span><br><span class="line">        使用transaction设置title和completed值，</span><br><span class="line">        只会在函数调用结束后触发一次todoItem UI组件的重新渲染</span><br><span class="line">        */</span><br><span class="line">        transaction(()=&gt;&#123;</span><br><span class="line">            this.completed = false;</span><br><span class="line">            this.title= &apos;&apos;;</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    ......</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var todoItem = new TodoItemModel();</span><br><span class="line">//调用reset只触发一次TodoItem UI组件的重新渲染</span><br><span class="line">todoItem.reset();</span><br></pre></td></tr></table></figure>
+<h3 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h3><h4 id="所有更改state都用action"><a href="#所有更改state都用action" class="headerlink" title="所有更改state都用action"></a>所有更改state都用action</h4><p>使用action后，可以清楚的看出，哪些代码可以更改可观察的变量。</p>
+<p>使用action，方便调试工具给出更多的信息</p>
+<p>使用transaction可以将多个应用状态(Observable)的更新视为一次操作，并只触发一次监听者(Reactions)的动作(UI更新、网络请求等)，避免多次重复渲染。action中封装了transaction，多次改变@observable变量时，只会重新渲染一次，提高了性能。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@autobind</span><br><span class="line">class TodoItemModel &#123;</span><br><span class="line">    id;</span><br><span class="line">    @observable title;</span><br><span class="line">    @observable completed;</span><br><span class="line"></span><br><span class="line">    //使用action后，reset函数执行完成后，才会触发一次其监听者</span><br><span class="line">    @action</span><br><span class="line">    reset() &#123;</span><br><span class="line">        this.completed = false;</span><br><span class="line">        this.title= &apos;&apos;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>假设某个组件使用了reset函数，虽然对2个可观察对象completed和title都改变了，但是只会触发一下。</p>
+<h4 id="所有的action都放在store中"><a href="#所有的action都放在store中" class="headerlink" title="所有的action都放在store中"></a>所有的action都放在store中</h4><p>把所有的状态改变都放在store中，不要散落在各个组件中。在排查问题时，各个组件都可以修改状态，很难定位是哪儿的问题。数据的变化都放在store中，看起来更清晰，也更好维护。</p>
+<h4 id="使用compute属性"><a href="#使用compute属性" class="headerlink" title="使用compute属性"></a>使用compute属性</h4><p>compute的值是延迟更新的，只有在使用的时候，才会自动计算。不再使用时，它会自动被垃圾回收。因此使用compute的值可以提高性能。</p>
+<h4 id="组件使用-observer"><a href="#组件使用-observer" class="headerlink" title="组件使用@observer"></a>组件使用@observer</h4><p><code>如果一个组件需要使用</code>@observable<code>变量（应用状态），就应该使用@observer修饰符。</code><br>@observer可以将 React 组件转变成响应式组件，确保任何组件渲染中使用的数据变化时都可以强制刷新组件。<br>借助于精确的依赖分析，mobx可以得出组件对@observable变量（应用状态）的依赖图谱，对使用@observer进行标记的组件，实现精准的shouldComponentUpdate函数，保证组件100%无浪费渲染。如果我们不对子组件使用@observer，我们就放弃了mobx对React组件的默认性能优化。</p>
+<h3 id="常见的问题"><a href="#常见的问题" class="headerlink" title="常见的问题"></a>常见的问题</h3><p>参考：<a href="https://foio.github.io/mobx-react/" target="_blank" rel="noopener">https://foio.github.io/mobx-react/</a><br><a href="https://segmentfault.com/a/1190000011148981" target="_blank" rel="noopener">https://segmentfault.com/a/1190000011148981</a></p>
 
       
     </div>
@@ -411,11 +449,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js/" rel="tag"># js</a>
-          
-            <a href="/tags/算法/" rel="tag"># 算法</a>
-          
-            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+            <a href="/tags/mobx/" rel="tag"># mobx</a>
           
         </div>
       
@@ -428,8 +462,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/11/2019年目标/" rel="next" title="2019学习目标">
-                <i class="fa fa-chevron-left"></i> 2019学习目标
+              <a href="/2019/03/16/leetcode-2019-03-16/" rel="next" title="LeetCode每日一练">
+                <i class="fa fa-chevron-left"></i> LeetCode每日一练
               </a>
             
           </div>
@@ -438,7 +472,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/15/leetcode-2019-03-15/" rel="prev" title="LeetCode每日一练">
+              <a href="/2019/03/17/leetcode-2019-03-17/" rel="prev" title="LeetCode每日一练">
                 LeetCode每日一练 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -595,7 +629,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目，Middle-of-the-Linked-List"><span class="nav-number">1.</span> <span class="nav-text">题目，Middle of the Linked List</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解析"><span class="nav-number">2.</span> <span class="nav-text">解析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是状态管理"><span class="nav-number">1.</span> <span class="nav-text">什么是状态管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mobx-原理"><span class="nav-number">2.</span> <span class="nav-text">mobx 原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念"><span class="nav-number">2.1.</span> <span class="nav-text">基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mobx使用"><span class="nav-number">2.2.</span> <span class="nav-text">mobx使用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mobx-react-渲染性能优化原理"><span class="nav-number">3.</span> <span class="nav-text">mobx-react 渲染性能优化原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#最佳实践"><span class="nav-number">4.</span> <span class="nav-text">最佳实践</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#所有更改state都用action"><span class="nav-number">4.1.</span> <span class="nav-text">所有更改state都用action</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#所有的action都放在store中"><span class="nav-number">4.2.</span> <span class="nav-text">所有的action都放在store中</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用compute属性"><span class="nav-number">4.3.</span> <span class="nav-text">使用compute属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件使用-observer"><span class="nav-number">4.4.</span> <span class="nav-text">组件使用@observer</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的问题"><span class="nav-number">5.</span> <span class="nav-text">常见的问题</span></a></li></ol></div>
             
 
           </div>
