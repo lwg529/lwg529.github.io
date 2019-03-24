@@ -79,18 +79,20 @@
 
 
 
-<meta name="description" content="题目，Path Sum III123456789101112131415root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8      10     /  \    5   -3   / \    \  3   2   11 / \   \3  -2   1Return 3. The paths that sum to 8 are:1.  5 -&amp;gt">
+<meta name="description" content="题目，883. Projection Area of 3D Shapes解析有一个 N  N 的网格，我们在上面放一些 1  1  1 的小正方体，输入一个N  N的网格矩阵，v=grid[i][j]表示在grid(i, j)这个位置上放置v个立方体，现在我们看这些立方体在xy, yz, xz三个维度的投影，返回三个维度的投影的面积的和。 输入：[[1,2],[3,4]]输出：17说明：见下图">
 <meta name="keywords" content="js,算法,数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode每日一练">
-<meta property="og:url" content="http://yoursite.com/2019/03/16/leetcode-2019-03-16/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/03/20/leetcode-2019-03-20/index.html">
 <meta property="og:site_name" content="刘小妞的博客">
-<meta property="og:description" content="题目，Path Sum III123456789101112131415root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8      10     /  \    5   -3   / \    \  3   2   11 / \   \3  -2   1Return 3. The paths that sum to 8 are:1.  5 -&amp;gt">
+<meta property="og:description" content="题目，883. Projection Area of 3D Shapes解析有一个 N  N 的网格，我们在上面放一些 1  1  1 的小正方体，输入一个N  N的网格矩阵，v=grid[i][j]表示在grid(i, j)这个位置上放置v个立方体，现在我们看这些立方体在xy, yz, xz三个维度的投影，返回三个维度的投影的面积的和。 输入：[[1,2],[3,4]]输出：17说明：见下图">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-16T09:01:56.065Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/b30ea430ly1g1dzos6grxj20en03xjrp.jpg">
+<meta property="og:updated_time" content="2019-03-24T09:24:13.193Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode每日一练">
-<meta name="twitter:description" content="题目，Path Sum III123456789101112131415root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8      10     /  \    5   -3   / \    \  3   2   11 / \   \3  -2   1Return 3. The paths that sum to 8 are:1.  5 -&amp;gt">
+<meta name="twitter:description" content="题目，883. Projection Area of 3D Shapes解析有一个 N  N 的网格，我们在上面放一些 1  1  1 的小正方体，输入一个N  N的网格矩阵，v=grid[i][j]表示在grid(i, j)这个位置上放置v个立方体，现在我们看这些立方体在xy, yz, xz三个维度的投影，返回三个维度的投影的面积的和。 输入：[[1,2],[3,4]]输出：17说明：见下图">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/b30ea430ly1g1dzos6grxj20en03xjrp.jpg">
 
 
 
@@ -120,7 +122,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/16/leetcode-2019-03-16/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/20/leetcode-2019-03-20/">
 
 
 
@@ -283,7 +285,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/16/leetcode-2019-03-16/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/20/leetcode-2019-03-20/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘小妞">
@@ -312,8 +314,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-16T00:00:00+08:00">
-                2019-03-16
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-20T00:00:00+08:00">
+                2019-03-20
               </time>
             
 
@@ -352,7 +354,7 @@
 
           
           
-             <span id="/2019/03/16/leetcode-2019-03-16/" class="leancloud_visitors" data-flag-title="LeetCode每日一练">
+             <span id="/2019/03/20/leetcode-2019-03-20/" class="leancloud_visitors" data-flag-title="LeetCode每日一练">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,9 +385,12 @@
       
 
       
-        <h4 id="题目，Path-Sum-III"><a href="#题目，Path-Sum-III" class="headerlink" title="题目，Path Sum III"></a>题目，<a href="https://leetcode.com/problems/path-sum-iii/" target="_blank" rel="noopener">Path Sum III</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">root = [10,5,-3,3,2,null,11,3,-2,null,1], sum = 8</span><br><span class="line"></span><br><span class="line">      10</span><br><span class="line">     /  \</span><br><span class="line">    5   -3</span><br><span class="line">   / \    \</span><br><span class="line">  3   2   11</span><br><span class="line"> / \   \</span><br><span class="line">3  -2   1</span><br><span class="line"></span><br><span class="line">Return 3. The paths that sum to 8 are:</span><br><span class="line"></span><br><span class="line">1.  5 -&gt; 3</span><br><span class="line">2.  5 -&gt; 2 -&gt; 1</span><br><span class="line">3. -3 -&gt; 11</span><br></pre></td></tr></table></figure>
-<h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><p>从整个树寻找和为sum = （左子树和为sum） + （右子树和为sum）+ （带根节点和为sum）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">let pathSum = function(root, sum) &#123;</span><br><span class="line">  if (!root) return 0;</span><br><span class="line">  return sumHelper(root, 0, sum) + pathSum(root.left, sum) + pathSum(root.right, sum);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">let sumHelper = (root, pre, sum) =&gt; &#123;</span><br><span class="line">  let count = 0;</span><br><span class="line">  if (!root) return 0;</span><br><span class="line">  //先求出之前的pre和当前节点的和</span><br><span class="line">  let total  = pre + root.val;</span><br><span class="line">  // total === sum,则寻找到了一组，值为1，不相等，则是0. 然后从左右子树找pre为total，和为sum的组合</span><br><span class="line">  if(total === sum) &#123;</span><br><span class="line">    count = 1;</span><br><span class="line">  &#125;</span><br><span class="line">  return count + sumHelper(root.left, total, sum) + sumHelper(root.right, total, sum);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-
+        <h4 id="题目，883-Projection-Area-of-3D-Shapes"><a href="#题目，883-Projection-Area-of-3D-Shapes" class="headerlink" title="题目，883. Projection Area of 3D Shapes"></a>题目，<a href="https://leetcode.com/problems/projection-area-of-3d-shapes/" target="_blank" rel="noopener">883. Projection Area of 3D Shapes</a></h4><h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><p>有一个 N <em> N 的网格，我们在上面放一些 1 </em> 1 <em> 1 的小正方体，输入一个N </em> N的网格矩阵，v=grid[i][j]表示在grid(i, j)这个位置上放置v个立方体，现在我们看这些立方体在xy, yz, xz三个维度的投影，返回三个维度的投影的面积的和。</p>
+<p>输入：[[1,2],[3,4]]<br>输出：17<br>说明：见下图</p>
+<p><img src="https://ws1.sinaimg.cn/large/b30ea430ly1g1dzos6grxj20en03xjrp.jpg" alt></p>
+<p>三个方向上投影的面积分别为xy=4, xz=6, yz=7，加起来和为17.</p>
+<p>xy维度上就是grid矩阵中非0元素的个数，xz维度上就是grid矩阵每列的最大值的和，yz维度上就是grid矩阵每行的最大值的和，遍历矩阵求得三个维度的投影的面积再相加即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var projectionArea = function(grid) &#123;</span><br><span class="line">    let sum = 0;</span><br><span class="line">    for(let i = 0; i &lt; grid.length; i++)&#123;</span><br><span class="line">      let tmp1 = grid[i][0];</span><br><span class="line">      let tmp2 = grid[0][i];</span><br><span class="line">      for(let j = 0; j &lt; grid[i].length; j++)&#123; //每行每列找最大值</span><br><span class="line">          if(grid[i][j]&gt;tmp1)</span><br><span class="line">              tmp1 = grid[i][j]; //每行最大值</span><br><span class="line">          if(grid[j][i]&gt;tmp2)</span><br><span class="line">              tmp2 = grid[j][i]; //每列最大值</span><br><span class="line">          if(grid[i][j]!=0)      //查看元素是否为零，就是xz维度的值</span><br><span class="line">              sum++;</span><br><span class="line">      &#125;</span><br><span class="line">      sum += (tmp1+tmp2);</span><br><span class="line">    &#125;</span><br><span class="line">  return sum;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -419,7 +424,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/15/leetcode-2019-03-15/" rel="next" title="LeetCode每日一练">
+              <a href="/2019/03/19/leetcode-2019-03-19/" rel="next" title="LeetCode每日一练">
                 <i class="fa fa-chevron-left"></i> LeetCode每日一练
               </a>
             
@@ -429,8 +434,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/17/mobx使用及最佳实践/" rel="prev" title="mobx使用及最佳实践">
-                mobx使用及最佳实践 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/21/leetcode-2019-03-21/" rel="prev" title="LeetCode每日一练">
+                LeetCode每日一练 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -586,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目，Path-Sum-III"><span class="nav-number">1.</span> <span class="nav-text">题目，Path Sum III</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解析"><span class="nav-number">2.</span> <span class="nav-text">解析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目，883-Projection-Area-of-3D-Shapes"><span class="nav-number">1.</span> <span class="nav-text">题目，883. Projection Area of 3D Shapes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解析"><span class="nav-number">2.</span> <span class="nav-text">解析</span></a></li></ol></div>
             
 
           </div>
