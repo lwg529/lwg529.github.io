@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="js,算法,数据结构,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="遇见更好的自己">
-<meta property="og:type" content="website">
-<meta property="og:title" content="搜索">
-<meta property="og:url" content="http://yoursite.com/search/index.html">
+<meta name="description" content="题目，977. Squares of a Sorted ArrayGiven an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order. Example 1:Input: [-4,-">
+<meta name="keywords" content="js,算法,数据结构">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LeetCode每日一练">
+<meta property="og:url" content="http://yoursite.com/2019/03/23/2019-03-23-977. Squares of a Sorted Array/index.html">
 <meta property="og:site_name" content="刘小妞的博客">
-<meta property="og:description" content="遇见更好的自己">
+<meta property="og:description" content="题目，977. Squares of a Sorted ArrayGiven an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order. Example 1:Input: [-4,-">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-12T06:22:39.687Z">
+<meta property="og:updated_time" content="2019-03-30T08:45:53.753Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="搜索">
-<meta name="twitter:description" content="遇见更好的自己">
+<meta name="twitter:title" content="LeetCode每日一练">
+<meta name="twitter:description" content="题目，977. Squares of a Sorted ArrayGiven an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order. Example 1:Input: [-4,-">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/search/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/23/2019-03-23-977. Squares of a Sorted Array/">
 
 
 
 
 
-  <title>搜索 | 刘小妞的博客</title>
+  <title>LeetCode每日一练 | 刘小妞的博客</title>
   
 
 
@@ -270,33 +271,190 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/23/2019-03-23-977. Squares of a Sorted Array/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘小妞">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="刘小妞的博客">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">搜索</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">LeetCode每日一练</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-23T00:00:00+08:00">
+                2019-03-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2019/03/23/2019-03-23-977. Squares of a Sorted Array/" class="leancloud_visitors" data-flag-title="LeetCode每日一练">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h4 id="题目，977-Squares-of-a-Sorted-Array"><a href="#题目，977-Squares-of-a-Sorted-Array" class="headerlink" title="题目，977. Squares of a Sorted Array"></a>题目，<a href="https://leetcode.com/problems/squares-of-a-sorted-array/" target="_blank" rel="noopener">977. Squares of a Sorted Array</a></h4><p>Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.</p>
+<p>Example 1:<br>Input: [-4,-1,0,3,10]<br>Output: [0,1,9,16,100]</p>
+<p>Example 2:<br>Input: [-7,-3,2,3,11]<br>Output: [4,9,9,49,121]</p>
+<h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><p>一个有正数和负数的升序数组，返回每个数的平方，按照升序排列.</p>
+<p>直接每个数求平方，然后数组排序<br>空间复杂度O(n),时间复杂度nlog(n).<br>map时间复杂度是O(n), 排序的复杂度是n*log(n)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var sortedSquares = function (A) &#123;</span><br><span class="line">	A = A.map(x =&gt; x * x);</span><br><span class="line">	A.sort((a, b) =&gt; a - b);</span><br><span class="line"></span><br><span class="line">	return A;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>时间复杂度O(n)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">var sortedSquares = function (A) &#123;</span><br><span class="line">  let i = 0, j = A.length - 1</span><br><span class="line">  let ans = [];</span><br><span class="line">  while (i &lt;= j) &#123;</span><br><span class="line">    if (Math.abs(A[i]) &lt; Math.abs(A[j])) &#123;</span><br><span class="line">      ans.push(Math.abs(A[j]));</span><br><span class="line">      j--;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      ans.push(Math.abs(A[i]));</span><br><span class="line">      i++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  let res = []</span><br><span class="line">  for (let i = ans.length - 1; i &gt;= 0; i--) res.push(ans[i] * ans[i]);</span><br><span class="line">  return res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+            <a href="/tags/数据结构/" rel="tag"># 数据结构</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/22/2019-03-22-590. N-ary Tree Postorder Traversal/" rel="next" title="LeetCode每日一练">
+                <i class="fa fa-chevron-left"></i> LeetCode每日一练
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/24/2019-03-24-905. Sort Array By Parity/" rel="prev" title="LeetCode每日一练">
+                LeetCode每日一练 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -334,8 +492,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -413,6 +580,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目，977-Squares-of-a-Sorted-Array"><span class="nav-number">1.</span> <span class="nav-text">题目，977. Squares of a Sorted Array</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解析"><span class="nav-number">2.</span> <span class="nav-text">解析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

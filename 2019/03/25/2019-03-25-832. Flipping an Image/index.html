@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目，590. N-ary Tree Postorder Traversal解析n叉树的后序遍历，左-&amp;gt;右-&amp;gt;根 1234567891011var postorder = function(root) &amp;#123;  const res = [];  if(!root) &amp;#123;    return [];  &amp;#125;  for(let i=0; i&amp;lt;root.child">
+<meta name="description" content="题目，832. Flipping an ImageGiven a binary matrix A, we want to flip the image horizontally, then invert it, and return the resulting image. To flip an image horizontally means that each row of the image">
 <meta name="keywords" content="js,算法,数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="LeetCode每日一练">
-<meta property="og:url" content="http://yoursite.com/2019/03/22/leetcode-2019-03-22/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/03/25/2019-03-25-832. Flipping an Image/index.html">
 <meta property="og:site_name" content="刘小妞的博客">
-<meta property="og:description" content="题目，590. N-ary Tree Postorder Traversal解析n叉树的后序遍历，左-&amp;gt;右-&amp;gt;根 1234567891011var postorder = function(root) &amp;#123;  const res = [];  if(!root) &amp;#123;    return [];  &amp;#125;  for(let i=0; i&amp;lt;root.child">
+<meta property="og:description" content="题目，832. Flipping an ImageGiven a binary matrix A, we want to flip the image horizontally, then invert it, and return the resulting image. To flip an image horizontally means that each row of the image">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-24T09:47:40.402Z">
+<meta property="og:updated_time" content="2019-03-30T10:12:31.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="LeetCode每日一练">
-<meta name="twitter:description" content="题目，590. N-ary Tree Postorder Traversal解析n叉树的后序遍历，左-&amp;gt;右-&amp;gt;根 1234567891011var postorder = function(root) &amp;#123;  const res = [];  if(!root) &amp;#123;    return [];  &amp;#125;  for(let i=0; i&amp;lt;root.child">
+<meta name="twitter:description" content="题目，832. Flipping an ImageGiven a binary matrix A, we want to flip the image horizontally, then invert it, and return the resulting image. To flip an image horizontally means that each row of the image">
 
 
 
@@ -120,7 +120,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/22/leetcode-2019-03-22/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/25/2019-03-25-832. Flipping an Image/">
 
 
 
@@ -283,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/22/leetcode-2019-03-22/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/25/2019-03-25-832. Flipping an Image/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘小妞">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-22T00:00:00+08:00">
-                2019-03-22
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-25T00:00:00+08:00">
+                2019-03-25
               </time>
             
 
@@ -352,7 +352,7 @@
 
           
           
-             <span id="/2019/03/22/leetcode-2019-03-22/" class="leancloud_visitors" data-flag-title="LeetCode每日一练">
+             <span id="/2019/03/25/2019-03-25-832. Flipping an Image/" class="leancloud_visitors" data-flag-title="LeetCode每日一练">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,8 +383,14 @@
       
 
       
-        <h4 id="题目，590-N-ary-Tree-Postorder-Traversal"><a href="#题目，590-N-ary-Tree-Postorder-Traversal" class="headerlink" title="题目，590. N-ary Tree Postorder Traversal"></a>题目，<a href="https://leetcode.com/problems/n-ary-tree-postorder-traversal/" target="_blank" rel="noopener">590. N-ary Tree Postorder Traversal</a></h4><h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><p>n叉树的后序遍历，左-&gt;右-&gt;根</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var postorder = function(root) &#123;</span><br><span class="line">  const res = [];</span><br><span class="line">  if(!root) &#123;</span><br><span class="line">    return [];</span><br><span class="line">  &#125;</span><br><span class="line">  for(let i=0; i&lt;root.children.length; i++) &#123;</span><br><span class="line">    res.push(...postorder(root.children[i]));</span><br><span class="line">  &#125;</span><br><span class="line">  res.push(root.val);</span><br><span class="line">  return res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <h4 id="题目，832-Flipping-an-Image"><a href="#题目，832-Flipping-an-Image" class="headerlink" title="题目，832. Flipping an Image"></a>题目，<a href="https://leetcode.com/problems/flipping-an-image/" target="_blank" rel="noopener">832. Flipping an Image</a></h4><p>Given a binary matrix A, we want to flip the image horizontally, then invert it, and return the resulting image.</p>
+<p>To flip an image horizontally means that each row of the image is reversed.  For example, flipping [1, 1, 0] horizontally results in [0, 1, 1].</p>
+<p>To invert an image means that each 0 is replaced by 1, and each 1 is replaced by 0. For example, inverting [0, 1, 1] results in [1, 0, 0].</p>
+<p>Example 1:<br>Input: [<br>    [1,1,0],<br>    [1,0,1],<br>    [0,0,0]<br>]<br>Output: [[1,0,0],[0,1,0],[1,1,1]]<br>Explanation: First reverse each row: [[0,1,1],[1,0,1],[0,0,0]].<br>Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]</p>
+<h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><p>二进制的数组，先水平交换，在0，1互换</p>
+<p>先reverse，然后1减去每个元素得到反转<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var flipAndInvertImage = function(A) &#123;</span><br><span class="line">    let res = A.map(arr =&gt; &#123;</span><br><span class="line">        return arr.reverse().map(e =&gt; &#123;</span><br><span class="line">            return 1-e;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;)</span><br><span class="line">    return res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>直接遍历二维数组，交换反转每个值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">var flipAndInvertImage = function(A) &#123;</span><br><span class="line">    let len = A[0].length;</span><br><span class="line">    for(let i=0; i&lt;A.length; i++)&#123;</span><br><span class="line">        for(let j=0; j&lt;len/2; j++) &#123;</span><br><span class="line">            let temp = A[i][j];</span><br><span class="line">            A[i][j] = 1-A[i][len-j-1];</span><br><span class="line">            A[i][len-j-1] = 1-temp;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return A;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -418,7 +424,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/21/leetcode-2019-03-21/" rel="next" title="LeetCode每日一练">
+              <a href="/2019/03/24/2019-03-24-905. Sort Array By Parity/" rel="next" title="LeetCode每日一练">
                 <i class="fa fa-chevron-left"></i> LeetCode每日一练
               </a>
             
@@ -427,6 +433,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/03/26/2019-03-26-561. Array Partition I/" rel="prev" title="LeetCode每日一练">
+                LeetCode每日一练 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -510,7 +520,7 @@
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -581,7 +591,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目，590-N-ary-Tree-Postorder-Traversal"><span class="nav-number">1.</span> <span class="nav-text">题目，590. N-ary Tree Postorder Traversal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解析"><span class="nav-number">2.</span> <span class="nav-text">解析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目，832-Flipping-an-Image"><span class="nav-number">1.</span> <span class="nav-text">题目，832. Flipping an Image</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解析"><span class="nav-number">2.</span> <span class="nav-text">解析</span></a></li></ol></div>
             
 
           </div>
