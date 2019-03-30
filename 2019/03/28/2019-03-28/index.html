@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="题目，Remove Duplicates from Sorted ListInput: 1-&amp;gt;1-&amp;gt;2Output: 1-&amp;gt;2 Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3Output: 1-&amp;gt;2-&amp;gt;3 解析删去有序链表中重复的元素  维护两个指针，一个指向当前不重复的最后一个元素，另一个进行依次扫描，遇到不重复的则更新第一个指针，继续扫描，否则就">
+<meta name="description" content="题目，509. Fibonacci NumberThe Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1.">
 <meta name="keywords" content="js,算法,数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2019-03-15-Remove Duplicates from Sorted List">
-<meta property="og:url" content="http://yoursite.com/2019/03/15/2019-03-15-Remove Duplicates from Sorted List/index.html">
+<meta property="og:title" content="2019-03-28-Fibonacci Number">
+<meta property="og:url" content="http://yoursite.com/2019/03/28/2019-03-28/index.html">
 <meta property="og:site_name" content="刘小妞的博客">
-<meta property="og:description" content="题目，Remove Duplicates from Sorted ListInput: 1-&amp;gt;1-&amp;gt;2Output: 1-&amp;gt;2 Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3Output: 1-&amp;gt;2-&amp;gt;3 解析删去有序链表中重复的元素  维护两个指针，一个指向当前不重复的最后一个元素，另一个进行依次扫描，遇到不重复的则更新第一个指针，继续扫描，否则就">
+<meta property="og:description" content="题目，509. Fibonacci NumberThe Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-03-30T12:33:06.755Z">
+<meta property="og:updated_time" content="2019-03-30T13:53:29.443Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2019-03-15-Remove Duplicates from Sorted List">
-<meta name="twitter:description" content="题目，Remove Duplicates from Sorted ListInput: 1-&amp;gt;1-&amp;gt;2Output: 1-&amp;gt;2 Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3Output: 1-&amp;gt;2-&amp;gt;3 解析删去有序链表中重复的元素  维护两个指针，一个指向当前不重复的最后一个元素，另一个进行依次扫描，遇到不重复的则更新第一个指针，继续扫描，否则就">
+<meta name="twitter:title" content="2019-03-28-Fibonacci Number">
+<meta name="twitter:description" content="题目，509. Fibonacci NumberThe Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1.">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/15/2019-03-15-Remove Duplicates from Sorted List/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/28/2019-03-28/">
 
 
 
 
 
-  <title>2019-03-15-Remove Duplicates from Sorted List | 刘小妞的博客</title>
+  <title>2019-03-28-Fibonacci Number | 刘小妞的博客</title>
   
 
 
@@ -283,7 +283,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/15/2019-03-15-Remove Duplicates from Sorted List/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/28/2019-03-28/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="刘小妞">
@@ -300,7 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">2019-03-15-Remove Duplicates from Sorted List</h1>
+          <h1 class="post-title" itemprop="name headline">2019-03-28-Fibonacci Number</h1>
         
 
         <div class="post-meta">
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-15T00:00:00+08:00">
-                2019-03-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-03-28T00:00:00+08:00">
+                2019-03-28
               </time>
             
 
@@ -352,7 +352,7 @@
 
           
           
-             <span id="/2019/03/15/2019-03-15-Remove Duplicates from Sorted List/" class="leancloud_visitors" data-flag-title="2019-03-15-Remove Duplicates from Sorted List">
+             <span id="/2019/03/28/2019-03-28/" class="leancloud_visitors" data-flag-title="2019-03-28-Fibonacci Number">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -383,17 +383,11 @@
       
 
       
-        <h4 id="题目，Remove-Duplicates-from-Sorted-List"><a href="#题目，Remove-Duplicates-from-Sorted-List" class="headerlink" title="题目，Remove Duplicates from Sorted List"></a>题目，<a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/" target="_blank" rel="noopener">Remove Duplicates from Sorted List</a></h4><p>Input: 1-&gt;1-&gt;2<br>Output: 1-&gt;2</p>
-<p>Input: 1-&gt;1-&gt;2-&gt;3-&gt;3<br>Output: 1-&gt;2-&gt;3</p>
-<h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><p>删去有序链表中重复的元素</p>
-<ol>
-<li><p>维护两个指针，一个指向当前不重复的最后一个元素，另一个进行依次扫描，遇到不重复的则更新第一个指针，继续扫描，否则就把前面指针指向当前元素的下一个（即把当前元素从链表中删除）。<br>假设数组长度为N, 时间复杂度为O(N),空间复杂度为O(1)(2个指针占用的空间) </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var deleteDuplicates = function(head) &#123;</span><br><span class="line">  if(!head) return head;</span><br><span class="line">  if(head &amp;&amp; !head.next) return head;</span><br><span class="line">  let current = head;</span><br><span class="line">  let currentNext = head.next;</span><br><span class="line">  while(currentNext !== null) &#123;</span><br><span class="line">    if(currentNext.val === current.val) &#123;</span><br><span class="line">      current.next = currentNext.next;</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      current = currentNext;</span><br><span class="line">    &#125;</span><br><span class="line">    currentNext = currentNext.next;</span><br><span class="line">  &#125;</span><br><span class="line">  return head;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>递归实现<br>假设数组长度为N, 时间复杂度为O(N),空间复杂度为O(1)(2个指针占用的空间)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var deleteDuplicates = function(head) &#123;</span><br><span class="line">  if(!head) return head;</span><br><span class="line">  if(head &amp;&amp; !head.next) return head;</span><br><span class="line">  let currentNode = head; </span><br><span class="line">  deleteDuplicates(currentNode.next)</span><br><span class="line">  if(currentNode.val === currentNode.next.val)&#123;</span><br><span class="line">    currentNode.next = currentNode.next.next;</span><br><span class="line">  &#125;</span><br><span class="line">  return currentNode;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+        <h4 id="题目，509-Fibonacci-Number"><a href="#题目，509-Fibonacci-Number" class="headerlink" title="题目，509. Fibonacci Number"></a>题目，<a href="https://leetcode.com/problems/fibonacci-number/" target="_blank" rel="noopener">509. Fibonacci Number</a></h4><p>The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,</p>
+<p>F(0) = 0,   F(1) = 1<br>F(N) = F(N - 1) + F(N - 2), for N &gt; 1.<br>Given N, calculate F(N).</p>
+<p>Example 1:<br>Input: 2<br>Output: 1<br>Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1.</p>
+<h4 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var fib = function(N) &#123;</span><br><span class="line">    if(N===0)&#123;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">    if(N===1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;</span><br><span class="line">    return fib(N-1)+fib(N-2);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var fib = function(N) &#123;</span><br><span class="line">    let arr = [0, 1];</span><br><span class="line">    for(let i = 2; i &lt;= N; i++) &#123;</span><br><span class="line">        arr[i] = arr[i-1] + arr[i-2];</span><br><span class="line">    &#125;</span><br><span class="line">    return arr[N]; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -428,8 +422,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/03/14/2019-03-14-Middle of the Linked List/" rel="next" title="2019-03-14-Middle of the Linked List">
-                <i class="fa fa-chevron-left"></i> 2019-03-14-Middle of the Linked List
+              <a href="/2019/03/27/2019-03-27/" rel="next" title="2019-03-27-Sort Array By Parity II">
+                <i class="fa fa-chevron-left"></i> 2019-03-27-Sort Array By Parity II
               </a>
             
           </div>
@@ -438,8 +432,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/16/2019-03-16-Path Sum III/" rel="prev" title="2019-03-16-Path Sum III">
-                2019-03-16-Path Sum III <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/29/2019-03-29/" rel="prev" title="2019-03-29-Sum of Even Numbers After Queries">
+                2019-03-29-Sum of Even Numbers After Queries <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -595,7 +589,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目，Remove-Duplicates-from-Sorted-List"><span class="nav-number">1.</span> <span class="nav-text">题目，Remove Duplicates from Sorted List</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解析"><span class="nav-number">2.</span> <span class="nav-text">解析</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#题目，509-Fibonacci-Number"><span class="nav-number">1.</span> <span class="nav-text">题目，509. Fibonacci Number</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解析"><span class="nav-number">2.</span> <span class="nav-text">解析</span></a></li></ol></div>
             
 
           </div>

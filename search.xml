@@ -1,6 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[2019-03-30-Move Zeroes]]></title>
+    <url>%2F2019%2F03%2F30%2F2019-03-30%2F</url>
+    <content type="text"><![CDATA[题目，283. Move ZeroesGiven an array nums, write a function to move all 0’s to the end of it while maintaining the relative order of the non-zero elements. Example:Input: [0,1,0,3,12]Output: [1,3,12,0,0] 解析12345678var moveZeroes = function(nums) &#123; for(let i = nums.length;i--;)&#123; if(nums[i]===0)&#123; nums.splice(i,1) nums.push(0); &#125; &#125;&#125;;]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2019-03-29-Sum of Even Numbers After Queries]]></title>
+    <url>%2F2019%2F03%2F29%2F2019-03-29%2F</url>
+    <content type="text"><![CDATA[题目，985. Sum of Even Numbers After QueriesWe have an array A of integers, and an array queries of queries. For the i-th query val = queries[i][0], index = queries[i][1], we add val to A[index]. Then, the answer to the i-th query is the sum of the even values of A. (Here, the given index = queries[i][1] is a 0-based index, and each query permanently modifies the array A.) Return the answer to all queries. Your answer array should have answer[i] as the answer to the i-th query. Example 1:Input: A = [1,2,3,4], queries = [[1,0],[-3,1],[-4,0],[2,3]]Output: [8,6,2,4]Explanation:At the beginning, the array is [1,2,3,4].After adding 1 to A[0], the array is [2,2,3,4], and the sum of even values is 2 + 2 + 4 = 8.After adding -3 to A[1], the array is [2,-1,3,4], and the sum of even values is 2 + 4 = 6.After adding -4 to A[0], the array is [-2,-1,3,4], and the sum of even values is -2 + 4 = 2.After adding 2 to A[3], the array is [-2,-1,3,6], and the sum of even values is -2 + 6 = 4. 解析queries数组第二个是index，说明数字加到数组的哪一位。 123456789var sumEvenAfterQueries = (A, queries) =&gt; &#123; let evenSum = A.reduce((acc, cur) =&gt; acc + (cur % 2 ? 0 : cur), 0); //数组里面偶数求和 return queries.map(([val, idx]) =&gt; &#123; if(A[idx] % 2 === 0) evenSum -= A[idx] A[idx] += val if(A[idx] % 2 === 0) evenSum += A[idx] return evenSum &#125;);&#125;]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[2019-03-28-Fibonacci Number]]></title>
+    <url>%2F2019%2F03%2F28%2F2019-03-28%2F</url>
+    <content type="text"><![CDATA[题目，509. Fibonacci NumberThe Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is, F(0) = 0, F(1) = 1F(N) = F(N - 1) + F(N - 2), for N &gt; 1.Given N, calculate F(N). Example 1:Input: 2Output: 1Explanation: F(2) = F(1) + F(0) = 1 + 0 = 1. 解析123456789var fib = function(N) &#123; if(N===0)&#123; return 0; &#125; if(N===1)&#123; return 1; &#125; return fib(N-1)+fib(N-2);&#125;; 1234567var fib = function(N) &#123; let arr = [0, 1]; for(let i = 2; i &lt;= N; i++) &#123; arr[i] = arr[i-1] + arr[i-2]; &#125; return arr[N]; &#125;]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+        <tag>算法</tag>
+        <tag>数据结构</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[2019-03-27-Sort Array By Parity II]]></title>
     <url>%2F2019%2F03%2F27%2F2019-03-27%2F</url>
     <content type="text"><![CDATA[题目，922. Sort Array By Parity IIGiven an array A of non-negative integers, half of the integers in A are odd, and half of the integers are even. Sort the array so that whenever A[i] is odd, i is odd; and whenever A[i] is even, i is even. You may return any answer array that satisfies this condition. Example 1:Input: [4,2,5,7]Output: [4,5,2,7]Explanation: [4,7,2,5], [2,5,4,7], [2,7,4,5] would also have been accepted. 解析对数组排序，角标和数同为奇数或者同为偶数 遍历数组，如果该位为偶数，放在偶数的位置，奇数则放在奇数的位置12345678910111213var sortArrayByParityII = function(A) &#123; let result = new Array(A.length); for(let i = 0, even = 0, odd = 1; i &lt; A.length; i ++) &#123; if(A[i] % 2 === 0) &#123; result[even] = A[i]; even += 2; &#125; else &#123; result[odd] = A[i]; odd += 2; &#125; &#125; return result;&#125;;]]></content>
